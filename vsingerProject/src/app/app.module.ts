@@ -10,12 +10,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { IndexMenuComponent } from './components/index-menu/index-menu.component';
+import { FootComponent } from './components/foot/foot.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IndexMenuComponent,
+    FootComponent
   ],
   imports: [
     BrowserModule,
