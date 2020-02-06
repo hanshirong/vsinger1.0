@@ -13,13 +13,23 @@ import en from '@angular/common/locales/en';
 import { IndexMenuComponent } from './components/index-menu/index-menu.component';
 import { FootComponent } from './components/foot/foot.component';
 
+import { AntCarouselComponent } from './components/ant-carousel/ant-carousel.component';
+import { RecommendCardComponent } from './components/cards/recommend-card/recommend-card.component';
+import { CardTwoTemplateComponent } from './components/cards/card-two-template/card-two-template.component';
+
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexMenuComponent,
-    FootComponent
+    FootComponent,
+
+    AntCarouselComponent,
+
+    RecommendCardComponent,
+
+    CardTwoTemplateComponent
   ],
   imports: [
     BrowserModule,

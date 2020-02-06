@@ -1,0 +1,23 @@
+<nz-card nzHoverable style="width:267px;height: 190px;" [nzCover]="coverTemplate">
+    <nz-card-meta [nzTitle]="titleTemplate" [nzDescription]="descriptionTemplate"></nz-card-meta>
+  </nz-card>
+  <ng-template #coverTemplate>
+    <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" style="height: 136px;"/>
+  </ng-template>
+  <ng-template #titleTemplate>
+    [{{songName}}]
+  </ng-template>
+  <ng-template #descriptionTemplate>
+      <nz-row>
+          <nz-col nzSpan="12">
+            <i nz-icon nzType="user" nzTheme="outline"></i>{{author}}
+          </nz-col>
+          <nz-col nzSpan="12">
+            <i nz-icon nzType="play-square" nzTheme="outline"></i>{{VV}}
+          </nz-col>
+      </nz-row> 
+  </ng-template>
+  <!-- todo -->
+<!-- 开放nzcover,width,height
+开放title的名字
+开放图标&后面的属性 -->
