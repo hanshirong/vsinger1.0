@@ -2,18 +2,18 @@
     <nz-card-meta [nzTitle]="titleTemplate" [nzDescription]="descriptionTemplate"></nz-card-meta>
   </nz-card>
   <ng-template #coverTemplate>
-    <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" style="height: 136px;"/>
+    <img alt="example" src="{{song.picture}}" style="height: 136px;"/>
   </ng-template>
   <ng-template #titleTemplate>
-    [{{songName}}]
+    [{{song.title}}]
   </ng-template>
   <ng-template #descriptionTemplate>
       <nz-row>
           <nz-col nzSpan="12">
-            <i nz-icon nzType="user" nzTheme="outline"></i>{{author}}
+            <i nz-icon nzType="{{icons.first}}" nzTheme="outline"></i>{{song.author}}
           </nz-col>
           <nz-col nzSpan="12">
-            <i nz-icon nzType="play-square" nzTheme="outline"></i>{{VV}}
+            <i nz-icon nzType="{{icons.second}}" nzTheme="outline"></i>{{song.VV}}
           </nz-col>
       </nz-row> 
   </ng-template>

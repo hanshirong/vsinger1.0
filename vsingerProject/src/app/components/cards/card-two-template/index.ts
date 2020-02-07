@@ -1,0 +1,1 @@
+export * from './card-two-template.component';

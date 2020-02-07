@@ -1,9 +1,16 @@
-<div class="recommandPart">
+<!-- <div class="recommandPart">
     <nz-row>
-        <nz-col nzSpan="12" *ngFor="let 1 of 5">
-            <app-recommend-card ></app-recommend-card>
+        <nz-col nzSpan="12" >
+            <app-recommend-card [songName]="songName"></app-recommend-card>
         </nz-col>
        
     </nz-row> 
-</div>
+</div> -->
 <!-- 去看看之前vue写的循环 -->
+<div  class="recommandPart">
+    <nz-row >
+      <nz-col nzSpan="22" nzOffset="3">
+        <app-recommend-card [song]="song" [icons]="icons"></app-recommend-card>
+      </nz-col>
+    </nz-row>
+</div>
