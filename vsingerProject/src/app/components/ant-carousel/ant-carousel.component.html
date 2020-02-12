@@ -1,7 +1,28 @@
 <div>
-    <nz-carousel [nzEffect]="effect">
-      <div nz-carousel-content *ngFor="let index of array">
-        <h3>{{ index }}</h3>
+    <nz-carousel [nzEffect]="effect" [ngStyle]="{'height': sliderHeight}">
+      <div nz-carousel-content *ngFor="let slider of sliders">
+        <img       
+        [ngStyle]="{'backgroundImage': 'url(\''+slider.imgUrl+'\') !important'}"
+        [alt]="slider.caption" >
+        <nz-row>
+          <nz-col nzSpan="2">
+            <div class="pre"  (click)="pre()">
+              <!-- <span><</span> -->
+             
+            </div>
+          </nz-col>
+          <nz-col nzSpan="2" nzOffset="20">
+            <div class="next" (click)="next()">
+              <!-- <span>></span> -->
+            </div>
+          </nz-col>
+        </nz-row>
+       
+      
       </div>
+     
     </nz-carousel>
 </div>
+<!-- todo
+图片如何作为背景图片呢
+左右箭头怎么表示 -->

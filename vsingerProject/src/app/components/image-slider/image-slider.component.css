@@ -1,0 +1,51 @@
+.container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.container .image-slider{
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.container img{
+    /* flex-shrink: 0; */
+    
+    width: 1920px;
+    height: 100%;
+    object-fit: cover;
+   
+    
+}
+.nav-section{
+    position: absolute;
+    bottom:32px;
+    width: 100%;
+    display:flex;
+    justify-content:center ;
+    align-items: stretch;
+}
+.frontArrow{
+    position: absolute;
+    margin-top: 270px;
+    width:46px;
+    height:76px;
+    background-color: red;
+    display: flex;
+    justify-content: flex-start;
+}
+.nav-section .slide-button{
+   display:flex;
+   width: 16px; 
+   height: 16px;
+   background-color: rgba(255,255,255,1);
+   /* background-color: black; */
+   text-decoration: none;
+   border-radius: 50%;
+   margin:20px ;
+}
+
+.nav-section .slide-button-select{
+    background-color: red;
+}
+

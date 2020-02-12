@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
+
 export interface SongClass{
   picture?:String;
   title?:String;
@@ -19,15 +20,21 @@ export interface IconClass{
   styleUrls: ['./recommend-card.component.css']
 })
 export class RecommendCardComponent implements OnInit {
-  @Input() song:SongClass={   
-     
-  };
-  @Input() icons:IconClass={
-
-  };
+  @Input() song:SongClass[]=[];
+  @Input() icons:IconClass={};
+  @Input() cardWidth="267px";
+  @Input() cardHeight="190px";
+  // @Input() imgHeight="126px";
+  @Input() imgHeight:string;
+  @Output() cardSelected=new EventEmitter();
   constructor() { }
 
   ngOnInit() {
+  }
+  handleSelection(){
+   // console.log(e.title);
+   this.cardSelected.emit(this.song);
+
   }
 
 }

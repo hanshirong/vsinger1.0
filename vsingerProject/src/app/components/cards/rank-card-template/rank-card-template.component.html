@@ -1,0 +1,22 @@
+<div class="rank-container">
+    <div class="rank-top">
+        <p>{{rankData.type}}</p>
+    </div>
+    <div class="rank-main">
+        <div *ngFor="let item of rankData.data; let i=index">
+           <div class="itemTemplate">
+                <div class="itemTemplate-index">
+                    {{i+1}}
+                </div>
+                <div class="itemTemplate-main">
+                   <div class="itemTemplate-main-title">{{item.title}}</div>             
+                    <br/>
+                    <div class="itemTemplate-main-author"> by {{item.author}}</div>
+                </div>
+           </div>
+        </div>
+    </div>
+    <div class="rank-bottom">
+        <div class="rank-bottom-logo"></div>
+    </div>
+</div>

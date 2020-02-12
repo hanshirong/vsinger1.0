@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+export interface ImageSliderClass{
+  imgUrl:string;
+  link?:string;
+  caption?:string;
+}
 
 @Component({
   selector: 'app-ant-carousel',
@@ -7,5 +12,7 @@ import { Component } from '@angular/core';
 })
 export class AntCarouselComponent {
   array = [1, 2, 3, 4];
+  @Input() sliderHeight="551px";
   // effect = 'scrollx';
+  @Input() sliders:ImageSliderClass[]=[];
 }

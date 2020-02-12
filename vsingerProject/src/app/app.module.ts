@@ -16,6 +16,11 @@ import { FootComponent } from './components/foot/foot.component';
 import { AntCarouselComponent } from './components/ant-carousel/ant-carousel.component';
 import { RecommendCardComponent } from './components/cards/recommend-card/recommend-card.component';
 import { CardTwoTemplateComponent } from './components/cards/card-two-template/card-two-template.component';
+import { ImageSliderComponent } from './components/image-slider/image-slider.component';
+import { RecordBannerComponent } from './components/record-banner/record-banner.component';
+import { HeadTemplateComponent } from './components/cards/head-template/head-template.component';
+import { MusicianCardTemplateComponent } from './components/cards/musician-card-template/musician-card-template.component';
+import { RankCardTemplateComponent } from './components/cards/rank-card-template/rank-card-template.component';
 
 registerLocaleData(en);
 
@@ -29,7 +34,17 @@ registerLocaleData(en);
 
     RecommendCardComponent,
 
-    CardTwoTemplateComponent
+    CardTwoTemplateComponent,
+
+    ImageSliderComponent,
+
+    RecordBannerComponent,
+
+    HeadTemplateComponent,
+
+    MusicianCardTemplateComponent,
+
+    RankCardTemplateComponent
   ],
   imports: [
     BrowserModule,

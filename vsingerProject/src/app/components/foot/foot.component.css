@@ -1,0 +1,87 @@
+#footer-bar {
+    height: 400px !important;
+    width: 100% !important;
+    background-color: #333333 !important;
+    background-size: auto 333px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#footer-content {
+    max-width: 1600px;
+    width: 1600px;
+    height: 100%;
+    margin: auto;
+}
+
+.footer-title{
+    width:131px;
+    height:63px;
+    opacity:0.60;
+    color: #A0A0A0;
+    font-size: 62px;
+    margin-top: 52px;
+}
+
+.footer-content-block {
+    margin-top: 66px;
+    width: 33%;
+    float: left;
+    height: 100px;
+}
+
+.foot-content-block-img {
+    height: 50%;
+    width: 100%;
+}
+
+.foot-content-block-img > img {
+    height: 40px;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.foot-content-block-text {
+    height: 50%;
+    width: 100%;
+    color: #A1A1A1;
+    
+}
+
+.foot-content-block-text > p {
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #A1A1A1;
+    font-size: 13px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+
+#foot-bottom-bar {
+    color: #A1A1A1;
+    font-size: 12px;
+    width: 100%;
+    float: left;
+    line-height: 1.5;
+    padding-top: 40px;
+}
+
+.foot-content-block-img-popcover {
+    background-size: 40px 40px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    height: 40px;
+    width: 40px;
+    border: none !important;
+    margin-top: 30px !important;
+    margin-right: 10px !important;
+}

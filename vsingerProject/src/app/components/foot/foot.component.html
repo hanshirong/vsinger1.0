@@ -1,1 +1,38 @@
-<p>foot works!</p>
+<div id="footer-bar">
+    <div id="footer-content">
+        <div class="footer-title">
+            <p>{{netName}}</p>
+        </div>
+        <div
+            *ngFor="let link of links"
+            class="footer-content-block"
+            >
+            <div class="foot-content-block-text">
+                <p>{{link.links.title}}</p>
+                <div *ngFor="let item of link.links.urls">
+                    <div *ngIf="item.popcover!=true else itemTemplate">
+                        <a href="item.url">{{item.text}}</a>
+                        <br *ngIf="item.br==true"/>
+                    </div>
+                    <ng-template #itemTemplate>
+                        <a nz-tooltip [nzTooltipTitle]="titleTemplate">{{item.text}}</a>
+                        <ng-template #titleTemplate>
+                            {{item.content}}
+                        </ng-template>
+                        <br *ngIf="item.br==true"/>
+                    </ng-template>
+                </div>     
+            </div>  
+        </div>      
+        <div id="foot-bottom-bar">
+            <p>
+                本站所应用的数据均为网络公开数据，如有错漏请指出，若本站有侵权行为，请联系团队，邮箱:
+                <strong>webmaster@luotianyi.com</strong>
+                <br/>本站遵循上海禾念信息科技有限公司的相关规定，本站为Vsinger非官方应援站，不用于商业。Copyright &#169; 2018-2020. 柠音信息科技有限公司 All rights
+                reserved.
+                <br/>浙ICP备19000712号 浙公网安备 33010502001266号
+            </p>
+        </div>
+    </div>
+    </div>
+

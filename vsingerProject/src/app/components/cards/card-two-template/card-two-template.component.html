@@ -1,16 +1,37 @@
-<!-- <div class="recommandPart">
-    <nz-row>
-        <nz-col nzSpan="12" >
-            <app-recommend-card [songName]="songName"></app-recommend-card>
-        </nz-col>
-       
-    </nz-row> 
-</div> -->
-<!-- 去看看之前vue写的循环 -->
 <div  class="recommandPart">
+    <!-- <ng-template #oneRow>
+        <nz-row >
+            <div *ngFor="let song of songs; let i=index">
+              <nz-col nzSpan="4">
+                  <div class="recommandPart-content-card">
+                      <app-recommend-card [song]="song" [icons]="icons" (cardSelected)="handleCardSelected($event)" [imgHeight]="imgHeight" *ngIf="i<5"></app-recommend-card>
+                  </div> 
+              </nz-col>
+            </div>
+      </nz-row>
+    </ng-template> -->
     <nz-row >
-      <nz-col nzSpan="22" nzOffset="3">
-        <app-recommend-card [song]="song" [icons]="icons"></app-recommend-card>
-      </nz-col>
+        <div *ngFor="let song of songs; let i=index">
+          <nz-col nzSpan="4">
+              <div class="recommandPart-content-card">
+                  <app-recommend-card [song]="song" [icons]="icons" (cardSelected)="handleCardSelected($event)" [imgHeight]="imgHeight" *ngIf="i<5"></app-recommend-card>
+              </div> 
+          </nz-col>
+        </div>
+  </nz-row>
+  <div  style="margin-top: 54px;">
+    <nz-row >
+        <div *ngFor="let song of songs; let i=index">
+          <nz-col nzSpan="4">
+              <div class="recommandPart-content-card">
+                  <app-recommend-card [song]="song" [icons]="icons" (cardSelected)="handleCardSelected($event)" [imgHeight]="imgHeight" *ngIf="i<5"></app-recommend-card>
+              </div> 
+          </nz-col>
+        </div>
     </nz-row>
+  </div>
+
+    <div class="card-pagination">
+        <nz-pagination [nzPageIndex]="1" [nzTotal]="50"></nz-pagination>
+    </div>
 </div>

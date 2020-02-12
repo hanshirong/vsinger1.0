@@ -1,0 +1,21 @@
+<div class="musician-container">
+    <div class="musician-content">
+       <div class="content-top" >
+           <div class="content-top-title" ><span>音乐人</span></div>
+           <div class="content-top-author">{{authorTop}}</div>
+       </div>
+       <div class="content-main">
+           <nz-row style="width: 100%;">
+               <nz-col nzSpan="10" nzOffset="2">
+                <div class="content-main-author">{{author}}</div>
+               </nz-col>
+               <nz-col nzSpan="10" nzOffset="2">
+                <div class="content-main-avatar"><nz-avatar [nzShape]="'square'" [nzSize]="101" [nzIcon]="'user'"></nz-avatar></div>
+               </nz-col>
+           </nz-row>
+       </div>
+       <div class="content-foot">
+        <div class="content-foot-author">{{authorBottom}}</div>
+       </div>
+    </div>
+</div>

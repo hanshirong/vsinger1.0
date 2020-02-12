@@ -14,14 +14,15 @@
 }
 
 .menu{
-    width:524px;
+    width:600px;
     /* height:24px; */
-    font-size:24px;
-    font-weight:bold;
+    font-size:30px;
+    font-weight:Regular;
     color:#000000;
     line-height:12px;
     margin-top: 45px;
-  
+    margin-left: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .user-logo{
@@ -84,12 +85,13 @@ a{
 
 .submenu{
     margin-top:64px;
-    width:456px;
-    height:18px;
-    font-size:18px;
+    width:600px;
+    height:26px;
+    font-size:22px;
     font-family:Microsoft YaHei;
     font-weight:400;
     color:rgba(102,204,255,1);
-    line-height:12px;
+    line-height:6px;
+    margin-left: 50px;
 
 }

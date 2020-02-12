@@ -1,8 +1,8 @@
-<nz-card nzHoverable style="width:267px;height: 190px;" [nzCover]="coverTemplate">
+<nz-card nzHoverable [ngStyle]="{'width':cardWidth,'height':cardHeight}" [nzCover]="coverTemplate" (click)="handleSelection()">
     <nz-card-meta [nzTitle]="titleTemplate" [nzDescription]="descriptionTemplate"></nz-card-meta>
   </nz-card>
   <ng-template #coverTemplate>
-    <img alt="example" src="{{song.picture}}" style="height: 136px;"/>
+    <img alt="example" src="{{song.picture}}" [ngStyle]="{'height':imgHeight}"/>
   </ng-template>
   <ng-template #titleTemplate>
     [{{song.title}}]
@@ -18,6 +18,4 @@
       </nz-row> 
   </ng-template>
   <!-- todo -->
-<!-- 开放nzcover,width,height
-开放title的名字
-开放图标&后面的属性 -->
+<!-- 开放宽度，高度，内容已经开放了 -->

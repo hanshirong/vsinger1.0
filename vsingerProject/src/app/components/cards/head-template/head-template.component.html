@@ -1,0 +1,9 @@
+<div id="card-head-template">
+    <div class="content-first-grade" >
+        <span class="first-grade-title">{{content.first[0].title}}</span>
+        <span class="first-grade-more">{{content.first[1].title}}</span>
+    </div>
+    <div class="content-second-grade">
+            <span *ngFor="let item of content.second" class="second-grade-title">{{item.title}}</span>
+    </div>
+</div>
