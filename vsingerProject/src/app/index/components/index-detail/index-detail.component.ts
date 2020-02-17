@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CardHeadContent, SongClass, IconClass } from 'src/app/shared/components';
+import { IndexService } from '../../services';
 
 @Component({
   selector: 'app-index-detail',
@@ -22,47 +23,7 @@ export class IndexDetailComponent implements OnInit {
     first:[{title:'其他分区'},{title:'更多'}],
     second:[{title:'动画'},{title:'教程'},{title:'文章'},{title:'相册'}],
   }
-  newSongs:SongClass[]=[{
-    picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      title:"test",
-      author:"茶壶",
-      VV:1234
-  },{
-    picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      title:"test2",
-      author:"茶壶",
-      VV:1234
-  },{
-    picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      title:"test2",
-      author:"茶壶",
-      VV:1234
-  },{
-    picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      title:"test2",
-      author:"茶壶",
-      VV:1234
-  },{
-    picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      title:"test2",
-      author:"茶壶",
-      VV:1234
-  },{
-    picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      title:"test2",
-      author:"茶壶",
-      VV:1234
-  },{
-    picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      title:"test2",
-      author:"茶壶",
-      VV:1234
-  },{
-    picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      title:"test2",
-      author:"茶壶",
-      VV:1234
-  }]
+  newSongs:SongClass[]=[]
   icons:IconClass={
     first:"user",
     second:"play-square"
@@ -70,13 +31,14 @@ export class IndexDetailComponent implements OnInit {
 
   imgHeight="262px";
 
-  constructor(private route:ActivatedRoute) { }
-
-  ngOnInit() {
+  constructor(private route:ActivatedRoute,private service:IndexService) { }
+  
+  ngOnInit() :void{
     this.route.paramMap.subscribe(params=>{
       this.selectedMenuLink=params.get('submenuLink');
       console.log( this.selectedMenuLink);
     })
+    this.newSongs=this.service.getNewSongs();
   }
 
 }

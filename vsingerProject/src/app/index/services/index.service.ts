@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TopMenu, ImageSliderClass, dataClass } from 'src/app/shared/components';
+import { TopMenu, ImageSliderClass, dataClass, SongClass } from 'src/app/shared/components';
 
 @Injectable()
 export class IndexService {
@@ -109,7 +109,59 @@ export class IndexService {
           songNumber:120712,
           upNumber:2012
     };
+    newSongs:SongClass[]=[{
+        picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+          title:"test",
+          author:"茶壶",
+          VV:1234
+      },{
+        picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+          title:"test2",
+          author:"茶壶",
+          VV:1234
+      },{
+        picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+          title:"test2",
+          author:"茶壶",
+          VV:1234
+      },{
+        picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+          title:"test2",
+          author:"茶壶",
+          VV:1234
+      },{
+        picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+          title:"test2",
+          author:"茶壶",
+          VV:1234
+      },{
+        picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+          title:"test2",
+          author:"茶壶",
+          VV:1234
+      },{
+        picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+          title:"test2",
+          author:"茶壶",
+          VV:1234
+      },{
+        picture:"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+          title:"test2",
+          author:"茶壶",
+          VV:1234
+    }];
     getMenus(){
         return this.menus;
     }
+    getSliders(){
+        return this.sliders;
+    }
+    getData(){
+        return this.data;
+    }
+    getNewSongs(){
+        return this.newSongs;
+    }
+
+    
 }

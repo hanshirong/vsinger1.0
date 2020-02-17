@@ -10,21 +10,14 @@ import { IndexService } from '../../services';
 })
 export class IndexContainerComponent implements OnInit {
   menus: TopMenu[] = []
-  sliders:ImageSliderClass[]=[
-   {
-    imgUrl:'',
-    link:'',
-    caption:'',
-   } 
-  ];
-  data:dataClass={
-      songNumber:120712,
-      upNumber:2012
-  }
+  sliders:ImageSliderClass[]=[]
+  data:dataClass={}
   constructor(private router:Router,private service:IndexService) { }
   
   ngOnInit() :void{
     this.menus=this.service.getMenus();
+    this.sliders=this.service.getSliders();
+    this.data=this.service.getData();
   }
   handleMenuClick(menu:TopMenu){
     this.router.navigate(['index',menu.link])
