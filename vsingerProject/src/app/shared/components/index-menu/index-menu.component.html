@@ -17,7 +17,7 @@
             <div class="submenu">
                 <ul>
                     <li *ngFor="let submenu of submenus;let j= index ">
-                        <a  [class.active]="j === selectedsubIndex" (click)="selectedsubIndex=j">
+                        <a  [class.active]="j === selectedsubIndex" (click)="handleSubClick(j)">
                             {{ submenu.title }}
                         </a>
                     </li>

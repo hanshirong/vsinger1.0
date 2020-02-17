@@ -1,0 +1,88 @@
+<div *ngIf="selectedMenuLink==='index' else other">
+    <div class="index-recommand">
+        <div class="recomand-head">
+            <app-head-template></app-head-template>
+        </div>
+        <div class="recomand-main">
+            <app-card-two-template></app-card-two-template>
+        </div>
+        <div class="recomand-foot">
+            <app-card-pagination></app-card-pagination>
+         </div>
+    </div>
+    <div class="index-new">
+        <div class="new-head">
+            <app-head-template [content]="newContent"></app-head-template>
+        </div>
+        <div class="new-main">
+            <nz-row>
+                <div *ngFor="let song of newSongs; let i=index">
+                  <nz-col nzSpan="4">
+                      <div class="recommandPart-content-card">
+                          <app-recommend-card [song]="song" [icons]="icons" (cardSelected)="handleCardSelected($event)" [imgHeight]="imgHeight" *ngIf="i<5"></app-recommend-card>
+                      </div> 
+                  </nz-col>
+                </div>
+          </nz-row>
+        </div>
+        <div class="new-foot">
+           <app-card-pagination></app-card-pagination>
+        </div>
+    </div>
+    <!-- 音乐人 -->
+    <div class="index-musician">
+        <div class="musician-head">
+            <app-head-template [content]="musicianContent"></app-head-template>
+        </div>
+        <div class="musician-main">
+            <nz-row>
+                <div *ngFor="let item of newSongs; let i=index">
+                  <nz-col nzSpan="7">
+                      <div >
+                          <app-musician-card-template  *ngIf="i<3"></app-musician-card-template>
+                      </div> 
+                  </nz-col>
+                </div>
+          </nz-row>
+        </div>
+        <div class="musician-foot">
+           <app-card-pagination></app-card-pagination>
+        </div>
+    </div>
+    <!-- 排行榜 -->
+    <div  class="index-rank">
+        <div class="rank-head">
+            <app-head-template [content]="rankContent"></app-head-template>
+        </div>
+        <div class="rank-main">
+            <nz-row>
+                <div *ngFor="let item of newSongs; let i=index">
+                  <nz-col nzSpan="7">
+                      <div >
+                          <app-rank-card-template  *ngIf="i<3"></app-rank-card-template>
+                      </div> 
+                  </nz-col>
+                </div>
+          </nz-row>
+        </div>
+        <div class="rank-foot">
+           <app-card-pagination></app-card-pagination>
+        </div>
+    </div>
+    <div class="index-other">
+        <div class="other-head">
+            <app-head-template [content]="otherContent"></app-head-template>
+        </div>
+        <div class="other-main">
+            <app-card-two-template></app-card-two-template>
+        </div>
+        <div class="other-foot">
+            <app-card-pagination></app-card-pagination>
+         </div>
+    </div>
+    <app-foot></app-foot>
+    
+</div>
+<ng-template #other>
+    在生产中
+</ng-template>

@@ -1,0 +1,7 @@
+<!-- 导航栏，meuns为导航栏内容 -->
+<app-index-menu [menus]="menus" (menuSelected)="handleMenuClick($event)"></app-index-menu>
+<!-- 轮播图，sliders为轮播图内容 -->
+<app-ant-carousel [sliders]="sliders"></app-ant-carousel>
+<!-- 收录数据展示，data是p主和收录总曲目的数量 -->
+<app-record-banner [data]="data"></app-record-banner>
+<router-outlet></router-outlet>

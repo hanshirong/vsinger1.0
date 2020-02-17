@@ -1,0 +1,27 @@
+::ng-deep .ant-pagination-item{
+    width:15px;
+    height:15px;
+    background:rgba(67,67,67,1);
+    opacity:0.49;
+    border-radius:50%;
+    min-width: 15px;
+}
+::ng-deep .ant-pagination-item a,.ant-pagination-next{
+    display:none;
+}
+::ng-deep .ant-pagination-item-active{
+    background: #66ccff;
+}
+::ng-deep .ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link{
+    display: none !important;
+    border: none;
+}
+
+
+::ng-deep .ant-pagination-item-link{
+    display: none !important;
+}
+
+.card-pagination{
+    margin:40px 0 27px 887px;
+}

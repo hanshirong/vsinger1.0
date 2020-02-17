@@ -1,0 +1,43 @@
+.recomand-head{
+    padding-top: 61px;
+    padding-left: 50px;
+}
+.recomand-main{
+    padding-top: 33px;
+    padding-left: 100px;
+}
+.recomand-foot{
+    padding-left: 120px;
+}
+.new-head,.musician-head,.rank-head,.other-head{
+
+    padding-left: 50px;
+}
+.new-main{
+    padding-top: 40px;
+    padding-left: 300px;
+}
+.new-foot{
+    padding-top: 100px;
+    padding-left: 120px;
+}
+
+.musician-main{
+    padding-top: 40px;
+    padding-left: 300px;
+}
+
+.musician-foot,.rank-foot,.other-foot{
+    padding-left: 120px;
+}
+
+.rank-main{
+    padding-top: 40px;
+    padding-left: 300px;
+}
+
+.other-main{
+    padding-top: 40px;
+    padding-left: 100px;
+}
+   
